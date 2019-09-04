@@ -1,0 +1,16 @@
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+wn.title("Tess & Alex")
+
+tess = turtle.Turtle()
+tess.color("hotpink")
+tess.pensize(5)
+tess.shape("turtle")
+
+for c in ["yellow", "red", "purple","blue"]:
+    tess.color(c)
+    tess.forward(50)
+    tess.left(90)
+
+wn.mainloop()
