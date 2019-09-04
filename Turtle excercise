@@ -1,0 +1,33 @@
+print("Write a program that prints We like Python's turtles! 1000 times.")
+for i in range(1000):
+    print("We like Python's turtles!")
+
+print("Write a program that uses a for loop to print the months of a year")
+for m in ["Jan","Feb","March","April","May","June","July","August","Sept","Oct","Nov","Dec"]:
+    print("One of months of the year is", m)
+
+print("Suppose our turtle tess is at heading 0 — facing east. We execute the statement tess.left(3645). What does tess do, and what is her final heading?")
+
+
+import turtle
+wn = turtle.Screen()
+tess = turtle.Turtle()
+tess.shape("turtle")
+
+tess.left(3645)
+
+wn.mainloop()
+#Tess keeps rotating until it has rotated 3645 degrees and ends up facing North East
+print("Write a loop that prints each of the numbers on a new line.")
+for xs in [12,10, 32, 3, 66, 17, 42, 99, 20]:
+    print(xs)
+
+print("Write a loop that adds all the numbers from the list into a variable called total. You should set the total variable to have the value 0 before you start adding them up, and print the value in total after the loop has completed.")
+total = 12+10+32+3+66+17+42+99+20
+print(total)
+
+print("If you were going to draw a regular polygon with 18 sides, what angle would you need to turn the turtle at each corner?")
+n = 18
+a = ((n - 2)*180)/n
+individual_interior_angle = a
+print(individual_interior_angle)
