@@ -1,0 +1,21 @@
+import turtle
+wn = turtle.Screen()
+patrick = turtle.Turtle()
+patrick.pensize(3)
+sandy = turtle.Turtle()
+sandy.pensize(3)
+
+sandy.forward(-90)
+sandy.right(-135)
+sandy.forward(-200)
+sandy.right(-147)
+sandy.forward(-245)
+
+patrick.forward(90)
+patrick.right(135)
+patrick.forward(200)
+patrick.right(147)
+patrick.forward(245)
+wn.mainloop()
+
+#A really bad star
