@@ -1,0 +1,26 @@
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("lightgreen")
+turtlio = turtle.Turtle()
+turtlio.color("blue")
+turtlio.shape("turtle")
+turtlio.penup()
+
+arrows = turtle.Turtle()
+arrows.color("blue")
+arrows.shape("arrow")
+arrows.penup()
+
+for i in range(12):
+    turtlio.forward(150)
+    turtlio.stamp()
+    turtlio.forward(-150)
+    turtlio.right(30)
+
+for i in range(12):
+    arrows.forward(130)
+    arrows.stamp()
+    arrows.forward(-130)
+    arrows.right(30)
+
+wn.mainloop()
