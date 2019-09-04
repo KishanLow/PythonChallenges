@@ -1,0 +1,52 @@
+print("Take the sentence: All work and no play makes Jack a dull boy. Store each word in a separate variable, then print out the sentence on one line using print.")
+one = "All "
+two = "work "
+three = "and "
+four = "no "
+five = "play "
+six = "makes "
+seven = "Jack "
+eight = "a dull "
+nine = "boy. "
+print(one+two+three+four+five+six+seven+eight+nine)
+
+print("Add parenthesis to the expression 6 * 1 - 2 to change its value from 4 to -6.")
+number = 6 * (1-2)
+print(number)
+
+print("Start the Python interpreter and enter bruce + 4 at the prompt. This will give you an error:")
+print("Assign a value to bruce so that bruce + 4 evaluates to 10.")
+bruce = 6
+print(bruce+4)
+
+p = 10000
+a = 0
+n = 12
+r = (8/100)
+t = int(input("Years of compound interest?"))
+
+a = p*(1 + r/n)**n*t
+print(a)
+
+print("You look at the clock and it is exactly 2pm. You set an alarm to go off in 51 hours. At what time does the alarm go off?")
+time_now = 2.00
+later = 51.00
+clock = 24.00
+
+difference = (time_now+later)
+
+future = int(difference/clock)
+
+r = (difference % clock)
+
+print(future, "days", r, "hours")
+
+print("Write a Python program to solve the general version of the above problem. Ask the user for the time now (in hours), and ask for the number of hours to wait. Your program should output what the time will be on the clock when the alarm goes off.")
+
+now = int(input("What time is it in hours?"))
+later_two = int(input("In how many hours would you like your alarm to ring?"))
+difference_two = (later_two + now)
+alarm = int(difference_two/clock)
+r_two = (difference % clock)
+
+print("Your alarm will ring in",alarm,"days","and",r_two,"hours!")
