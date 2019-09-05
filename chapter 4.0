@@ -1,0 +1,24 @@
+#cool stuff
+
+import turtle
+
+def draw_multicolor_square(t, sz):
+    for i in ["red","purple","hotpink","blue"]:
+        t.color(i)
+        t.forward(sz)
+        t.left(90)
+
+wn = turtle.Screen()
+wn.bgcolor("black")
+
+kishan = turtle.Turtle()
+kishan.pensize(3)
+kishan.speed(75)
+size = 20
+for i in range(30):
+    draw_multicolor_square(kishan, size)
+    size = size + 10
+    kishan.forward(10)
+    kishan.right(18)
+
+wn.mainloop()
