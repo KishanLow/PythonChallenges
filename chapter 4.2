@@ -1,0 +1,36 @@
+import turtle
+
+def make_window(color, title):
+    w = turtle.Screen()
+    w.bgcolor(color)
+    w.title(title)
+    return w
+
+def make_turtle(color, size):
+    alex = turtle.Turtle()
+    alex.color(color)
+    alex.pensize(size)
+    return alex
+
+wn = make_window("lightgreen","First Exercise")
+alex = make_turtle("hotpink",5)
+
+
+def draw_square(alex,w, h):
+    for i in range(2):
+        alex.forward(w)
+        alex.left(90)
+        alex.forward(h)
+        alex.left(90)
+
+
+for j in range(4):
+    draw_square(alex,50,50)
+    alex.forward(50)
+    alex.penup()
+    alex.forward(50)
+    alex.pendown()
+
+
+
+wn.mainloop()
