@@ -1,0 +1,26 @@
+import turtle
+
+def make_window(color, title):
+    w = turtle.Screen()
+    w.bgcolor(color)
+    w.title(title)
+    return w
+
+def make_turtle(color, size):
+    alex = turtle.Turtle()
+    alex.color(color)
+    alex.pensize(size)
+    return alex
+
+wn = make_window("white","Exercise")
+alex = make_turtle("black",5)
+
+alex.penup()
+alex.forward(50)
+alex.pendown()
+def draw_star(alex,w,h):
+    for i in range(8):
+        alex.right(h)
+        alex.forward(w)
+
+draw_star(alex,100,144)
