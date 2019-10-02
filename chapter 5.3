@@ -1,0 +1,19 @@
+def find_hypot(a,b):
+    hypot = (a**2+b**2)**0.5
+    return hypot
+
+print(find_hypot(3,4))
+
+def is_rightangled(a,b,c):
+    print(a**2+b**2==c**2)
+is_rightangled(3,4,5)
+
+def is_rightangled(a,b,c):
+    if c == max(a,b,c):
+        print(a**2+b**2==c**2)
+    elif b == max(a,b,c):
+        print(a ** 2 + c ** 2 == b ** 2)
+    elif a == max(a,b,c):
+        print(b ** 2 + c ** 2 == a ** 2)
+
+is_rightangled(3,5,4)
