@@ -1,0 +1,47 @@
+import sys
+def day_name(x):
+    if x == 0:
+        return "Monday"
+    if x == 1:
+        return "Tuesday"
+    if x == 2:
+        return "Wednesday"
+    if x == 3:
+        return "Thursday"
+    if x == 4:
+        return "Friday"
+    if x == 5:
+        return "Saturday"
+    if x == 6:
+        return "Sunday"
+    return None
+def day_num(x):
+    if x == "Monday":
+        return 0
+    if x == "Tuesday":
+        return 1
+    if x == "Wednesday":
+        return 2
+    if x == "Thursday":
+        return 3
+    if x == "Friday":
+        return 4
+    if x == "Saturday":
+        return 5
+    if x == "Sunday":
+        return 6
+    return None
+
+def test(did_pass):
+    """  Print the result of a test.  """
+    linenum = sys._getframe(1).f_lineno   # Get the caller's line number.
+    if did_pass:
+        msg = "Test at line {0} ok.".format(linenum)
+    else:
+        msg = ("Test at line {0} FAILED.".format(linenum))
+    print(msg)
+
+test(day_num("Friday") == 5)
+test(day_num("Sunday") == 0)
+test(day_num(day_name(3)) == 3)
+test(day_name(day_num("Thursday")) == "Thursday")
