@@ -1,0 +1,77 @@
+greeting = "Hello, world!"
+new_greeting = "J" + greeting[1:]
+print(new_greeting)
+
+def remove_vowels(s):
+    vowels = "aeiouAEIOU"
+    s_sans_vowels = ""
+    for x in s: #traces every letter in the given s
+        if x not in vowels: #if the letter isnt in aeiou
+            s_sans_vowels += x #replaces the letter with a blank space + the next letter
+    return s_sans_vowels
+
+print(remove_vowels("apple"))
+
+def find(strng, ch):
+    """
+      Find and return the index of ch in strng.
+      Return -1 if ch does not occur in strng.
+    """
+    ix = 0
+    while ix < len(strng):
+        if strng[ix] == ch:
+            return ix
+        ix = ix + 1
+    return -1
+
+print(find("apple","l"))
+
+
+
+punctuation = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+
+def remove_punctuation(s):
+    space = ""
+    for x in s:
+        if x not in punctuation:
+            space = space + x
+    return space
+
+print(remove_punctuation("apple's"))
+
+
+name = "Alice"
+age = 10
+s2 = "I am {0} and I am {1} years old.".format(name, age)
+print(s2)
+
+print("Strings are sequences of characters."[5])
+print("Mystery"[:4])
+print("p" in "Pineapple")
+print("apple" > "pineapple")
+
+prefixes = "JKLMNP"
+secondary_prefixes = "OQ"
+suffix = "ack"
+secondary_suffix = "uack"
+
+for letter in prefixes:
+    print(letter + suffix)
+for letter in secondary_prefixes:
+    print(letter + secondary_suffix)
+
+def reverse(word):
+    return word[::-1]
+
+def mirror(word):
+    return word + word[::-1]
+
+
+def count_letters(word):
+    counter = 0
+    for char in word:
+        if char == "s":
+            counter = counter + 1
+    return counter
+
+print(count_letters("Massachusetts"))
