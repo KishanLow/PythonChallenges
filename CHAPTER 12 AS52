@@ -1,0 +1,22 @@
+import random
+
+rng = random.Random()
+
+dice_throw = rng.randrange(1,7)
+delay_in_seconds = rng.random()*5.0
+
+r_odd = rng.randrange(1, 100, 2)
+print(dice_throw)
+print(r_odd)
+cards = list(range(52))
+print(cards)
+rng.shuffle(cards)
+print(cards)
+
+
+xs = list(range(1,13))
+rng = random.Random()
+rng.shuffle(xs)
+result = xs[:5]
+
+print(result)
