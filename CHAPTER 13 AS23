@@ -1,0 +1,26 @@
+myfile = open("test.txt", "w")
+myfile.write("My first file written from Python\n")
+myfile.write("---------------------------------\n")
+myfile.write("Hello, world!\n")
+myfile.close()
+
+mynewhandle = open("test.txt", "r")
+while True:
+    theline = mynewhandle.readline()
+    if len(theline) == 0:
+        break
+    # Now process the line we've just read
+    print(theline, end="")
+
+mynewhandle.close()
+
+f = open("friends.txt", "r")
+xs = f.readlines()
+f.close()
+
+xs.sort()
+
+g = open("sortedfriends.txt", "w")
+for v in xs:
+    g.write(v)
+g.close()
