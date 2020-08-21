@@ -1,0 +1,50 @@
+def get_age():
+    age = int(input("Please enter your age: "))
+    if age < 0:
+        # Create a new instance of an exception
+        my_error = ValueError("{0} is not a valid age".format(age))
+        raise my_error
+    return age
+
+print(get_age())
+
+def recursion_depth(number):
+    print("Recursion depth number", number)
+    try:
+        recursion_depth(number + 1)
+    except:
+        print("I cannot go any deeper into this wormhole.")
+
+print(recursion_depth(100))
+
+import turtle
+import time
+
+def show_poly():
+    try:
+        win = turtle.Screen()   # Grab/create a resource, e.g. a window
+        tess = turtle.Turtle()
+
+        # This dialog could be cancelled,
+        #   or the conversion to int might fail, or n might be zero.
+        n = int(input("How many sides do you want in your polygon?"))
+        angle = 360 / n
+        for i in range(n):      # Draw the polygon
+            tess.forward(10)
+            tess.left(angle)
+        time.sleep(3)           # Make program wait a few seconds
+    finally:
+        win.bye()               # Close the turtle's window
+
+show_poly()
+show_poly()
+show_poly()
+
+def readposint(integer):
+    integer = input(int("Is this value positive?"))
+    if integer > 0:
+        return True
+    elif integer < 0 or integer == "":
+        my_error = ValueError("{0} is not a valid number.format positive value")
+        raise my_error
+    return age
