@@ -1,0 +1,32 @@
+eng2sp = {}
+eng2sp["one"] = "uno"
+eng2sp["two"] = "dos"
+
+print(eng2sp)
+
+letter_counts = {}
+for letter in "Mississippi":
+    letter_counts[letter] = letter_counts.get(letter,0)+1
+
+print(letter_counts)
+
+kishans_counter = {}
+what_word = input(str("Please enter a string!"))
+for alphabet in what_word:
+    kishans_counter[alphabet] = kishans_counter.get(alphabet,0)+1
+    alphabet_items = list(kishans_counter.items())
+    alphabet_items.sort()
+print(alphabet_items) #To show the process of each step
+
+d = {"apples":15, "bananas":35, "grapes":12}
+print(d["bananas"])
+d["oranges"] = 20
+print(len(d))
+
+del d["apples"]
+print("apples" in d) # False !
+
+######################################
+
+
+
