@@ -1,0 +1,60 @@
+
+def koch(t, order, size):
+    """
+       Make turtle t draw a Koch fractal of 'order' and 'size'.
+       Leave the turtle facing the same direction.
+    """
+
+    if order == 0:          # The base case is just a straight line
+        t.forward(size)
+    else:
+        koch(t, order-1, size/3)   # Go 1/3 of the way
+        t.left(60)
+        koch(t, order-1, size/3)
+        t.right(120)
+        koch(t, order-1, size/3)
+        t.left(60)
+        koch(t, order-1, size/3)
+
+
+def koch(t, order, size):
+    if order == 0:
+        t.forward(size)
+    else:
+        for angle in [60, -120, 60, 0]:
+            koch(t, order-1, size/3)
+            t.left(angle)
+
+#####FIBONACCI NUMBERS
+
+def fib(n):
+    if n <= 1:
+        return n
+    t = fib(n-1) + fib(n-2)
+    return t
+
+#######################
+import os
+
+def get_dirlist(path):
+    """
+      Return a sorted list of all entries in path.
+      This returns just the names, not the full path to the names.
+    """
+    dirlist = os.listdir(path)
+    dirlist.sort()
+    return dirlist
+
+def print_files(path, prefix = ""):
+    """ Print recursive listing of contents of path """
+    if prefix == "":  # Detect outermost call, print a heading
+        print("Folder listing for", path)
+        prefix = "| "
+
+    dirlist = get_dirlist(path)
+    for f in dirlist:
+        print(prefix+f)                    # Print the line
+        fullname = os.path.join(path, f)   # Turn name into full pathname
+        if os.path.isdir(fullname):        # If a directory, recurse.
+            print_files(fullname, prefix + "| ")
+
